@@ -1,16 +1,4 @@
 Sample name,plate location,Sample type,geo_loc_name,Sampling depth,lat lon,Sample Date,Sampling depth,,Water depth,lat,,lon,,,Country,Location info,Sample Name,,
-Bassenthwaite_01,A10,Gill netting site,United Kingdom: Bassenthwaite,2 m,54.6713 N 3.23251666 W,2015-10-02,2,m,4,54.671300,N,-3.232517,3.232517,W,United Kingdom:,Bassenthwaite,Bassenthwaite,_,01
-Bassenthwaite_02,B10,Gill netting site,United Kingdom: Bassenthwaite,2 m,54.6473 N 3.21826666666667 W,2015-10-02,2,m,4,54.647300,N,-3.218267,3.218267,W,United Kingdom:,Bassenthwaite,Bassenthwaite,_,02
-Bassenthwaite_03,C10,Gill netting site,United Kingdom: Bassenthwaite,9 m,54.6481666666667 N 3.21515 W,2015-10-02,9,m,18,54.648167,N,-3.215150,3.215150,W,United Kingdom:,Bassenthwaite,Bassenthwaite,_,03
-Bassenthwaite_04,D10,Gill netting site,United Kingdom: Bassenthwaite,5.5 m,54.642366666666 N 3.2096833333333 W,2015-10-02,5.5,m,11,54.642367,N,-3.209683,3.209683,W,United Kingdom:,Bassenthwaite,Bassenthwaite,_,04
-Bassenthwaite_05,E10,Gill netting site,United Kingdom: Bassenthwaite,2.5 m,54.6387833333333 N 3.20388333333333 W,2015-10-02,2.5,m,5,54.638783,N,-3.203883,3.203883,W,United Kingdom:,Bassenthwaite,Bassenthwaite,_,05
-Bassenthwaite_shore-01,F10,Shore,United Kingdom: Bassenthwaite,0 m,54.666551 N 3.236783 W,2015-10-02,0,m,Surface,54.666551,N,-3.236783,3.236783,W,United Kingdom:,Bassenthwaite,Bassenthwaite,_shore-,01
-Derwent_01,C09,Gill netting site,United Kingdom: Derwent water,1.5 m,54.59285 N 3.1525 W,2015-10-02,1.5,m,3,54.592850,N,-3.152500,3.152500,W,United Kingdom:,Derwent water,Derwent,_,01
-Derwent_02,D09,Gill netting site,United Kingdom: Derwent water,2.5 m,54.5850166666667 N 3.14308333333333 W,2015-10-02,2.5,m,5,54.585017,N,-3.143083,3.143083,W,United Kingdom:,Derwent water,Derwent,_,02
-Derwent_03,E09,Gill netting site,United Kingdom: Derwent water,4 m,54.5789666666667 N 3.14525 W,2015-10-02,4,m,8,54.578967,N,-3.145250,3.145250,W,United Kingdom:,Derwent water,Derwent,_,03
-Derwent_04,F09,Gill netting site,United Kingdom: Derwent water,11 m,54.5757833333333 N 3.14055 W,2015-10-02,11,m,22,54.575783,N,-3.140550,3.140550,W,United Kingdom:,Derwent water,Derwent,_,04
-Derwent_05,G09,Gill netting site,United Kingdom: Derwent water,1.5 m,54.5727166666667 N 3.13373333333333 W,2015-10-02,1.5,m,3,54.572717,N,-3.133733,3.133733,W,United Kingdom:,Derwent water,Derwent,_,05
-Derwent_shore-01,H09,Shore,United Kingdom: Derwent water,0 m,54.59481 N 3.140609 W,2015-10-02,0,m,Surface,54.594810,N,-3.140609,3.140609,W,United Kingdom:,Derwent water,Derwent,_shore-,01
 Windermere_01,A01,Transect 1,United Kingdom: Windermere N basin,2 m,54.4191149901598 N 2.96878402121365 W,2015-01-28,2,m,4,54.419115,N,-2.968784,2.968784,W,United Kingdom:,Windermere N basin,Windermere,_,01
 Windermere_02,B03,Transect 1,United Kingdom: Windermere N basin,2.5 m,54.4117880333215 N 2.97764302231371 W,2015-01-28,2.5,m,5,54.411788,N,-2.977643,2.977643,W,United Kingdom:,Windermere N basin,Windermere,_,02
 Windermere_03,A05,Transect 1,United Kingdom: Windermere N basin,2.5 m,54.4069639965891 N 2.96369302086532 W,2015-01-28,2.5,m,5,54.406964,N,-2.963693,2.963693,W,United Kingdom:,Windermere N basin,Windermere,_,03
@@ -53,7 +41,6 @@ Windermere_29,H04,Transect 3,United Kingdom: Windermere S basin,19 m,54.30894602
 Windermere_30,B05,Transect 3,United Kingdom: Windermere S basin,17.5 m,54.3012339994311 N 2.95457401312887 W,2015-01-29,17.5,m,35,54.301234,N,-2.954574,2.954574,W,United Kingdom:,Windermere S basin,Windermere,_,30
 Windermere_31,C05,Transect 3,United Kingdom: Windermere S basin,16 m,54.2917350400239 N 2.95342996716499 W,2015-01-29,16,m,32,54.291735,N,-2.953430,2.953430,W,United Kingdom:,Windermere S basin,Windermere,_,31
 Windermere_32,D05,Transect 3,United Kingdom: Windermere S basin,9 m,54.2828909587115 N 2.95387797988951 W,2015-01-29,9,m,18,54.282891,N,-2.953878,2.953878,W,United Kingdom:,Windermere S basin,Windermere,_,32
-Windermere_33,E05,Gill netting site,United Kingdom: Windermere S basin,3 m,54.2832750175148 N 2.95135301537811 W,2015-01-29,3,m,6,54.283275,N,-2.951353,2.951353,W,United Kingdom:,Windermere S basin,Windermere,_,33
 Windermere_34,F05,Transect 2,United Kingdom: Windermere S basin,10 m,54.2914189584553 N 2.95473796315491 W,2015-01-29,10,m,20,54.291419,N,-2.954738,2.954738,W,United Kingdom:,Windermere S basin,Windermere,_,34
 Windermere_35,G05,Transect 2,United Kingdom: Windermere S basin,10 m,54.3009539600461 N 2.95683000236749 W,2015-01-29,10,m,20,54.300954,N,-2.956830,2.956830,W,United Kingdom:,Windermere S basin,Windermere,_,35
 Windermere_36,H05,Transect 2,United Kingdom: Windermere S basin,10 m,54.3091689795255 N 2.95583297498524 W,2015-01-29,10,m,20,54.309169,N,-2.955833,2.955833,W,United Kingdom:,Windermere S basin,Windermere,_,36
@@ -62,8 +49,6 @@ Windermere_38,B06,Transect 2,United Kingdom: Windermere S basin,10 m,54.32818902
 Windermere_39,C06,Transect 2,United Kingdom: Windermere S basin,10 m,54.3348249793052 N 2.94507002457976 W,2015-01-29,10,m,20,54.334825,N,-2.945070,2.945070,W,United Kingdom:,Windermere S basin,Windermere,_,39
 Windermere_40,E06,Transect 2,United Kingdom: Windermere S basin,10 m,54.342144979164 N 2.94254598207771 W,2015-01-29,10,m,20,54.342145,N,-2.942546,2.942546,W,United Kingdom:,Windermere S basin,Windermere,_,40
 Windermere_41,F06,Transect 2,United Kingdom: Windermere S basin,2 m,54.3507490027695 N 2.93181102722883 W,2015-01-29,2,m,4,54.350749,N,-2.931811,2.931811,W,United Kingdom:,Windermere S basin,Windermere,_,41
-Windermere_42,G06,Gill netting site,United Kingdom: Windermere N basin,2.5 m,54.3727980181574 N 2.92318697087466 W,2015-01-29,2.5,m,5,54.372798,N,-2.923187,2.923187,W,United Kingdom:,Windermere N basin,Windermere,_,42
-Windermere_43,H06,Gill netting site,United Kingdom: Windermere N basin,2.5 m,54.393286993727 N 2.93915600515902 W,2015-01-29,2.5,m,5,54.393287,N,-2.939156,2.939156,W,United Kingdom:,Windermere N basin,Windermere,_,43
 Windermere_44,A07,Transect 2,United Kingdom: Windermere N basin,10 m,54.4118949864059 N 2.97101100906729 W,2015-01-29,10,m,20,54.411895,N,-2.971011,2.971011,W,United Kingdom:,Windermere N basin,Windermere,_,44
 Windermere_45,B07,Transect 2,United Kingdom: Windermere N basin,10 m,54.4080590084195 N 2.96192402020096 W,2015-01-29,10,m,20,54.408059,N,-2.961924,2.961924,W,United Kingdom:,Windermere N basin,Windermere,_,45
 Windermere_46,C07,Transect 2,United Kingdom: Windermere N basin,10 m,54.3972569983452 N 2.95995796099305 W,2015-01-29,10,m,20,54.397257,N,-2.959958,2.959958,W,United Kingdom:,Windermere N basin,Windermere,_,46
@@ -71,12 +56,6 @@ Windermere_47,D07,Transect 2,United Kingdom: Windermere N basin,10 m,54.38936401
 Windermere_48,E07,Transect 2,United Kingdom: Windermere N basin,10 m,54.3831149674952 N 2.94327897951006 W,2015-01-29,10,m,20,54.383115,N,-2.943279,2.943279,W,United Kingdom:,Windermere N basin,Windermere,_,48
 Windermere_49,F07,Transect 2,United Kingdom: Windermere N basin,10 m,54.3737409822642 N 2.94166496023535 W,2015-01-29,10,m,20,54.373741,N,-2.941665,2.941665,W,United Kingdom:,Windermere N basin,Windermere,_,49
 Windermere_50,H07,Transect 2,United Kingdom: Windermere N basin,10 m,54.3678810261189 N 2.93923898600041 W,2015-01-29,10,m,20,54.367881,N,-2.939239,2.939239,W,United Kingdom:,Windermere N basin,Windermere,_,50
-Windermere_shore-01,E08,Shore,United Kingdom: Windermere S basin,0 m,54.352641 N 2.939863 W,2015-01-28,0,m,Surface,54.352641,N,-2.939863,2.939863,W,United Kingdom:,Windermere S basin,Windermere,_shore-,01
-Windermere_shore-02,A09,Shore,United Kingdom: Windermere S basin,0 m,54.352551 N 2.939846 W,2015-01-28,0,m,Surface,54.352551,N,-2.939846,2.939846,W,United Kingdom:,Windermere S basin,Windermere,_shore-,02
-Windermere_shore-03,B09,Shore,United Kingdom: Windermere S basin,0 m,54.352083 N 2.938972 W,2015-01-29,0,m,Surface,54.352083,N,-2.938972,2.938972,W,United Kingdom:,Windermere S basin,Windermere,_shore-,03
-Windermere_shore-04,F08,Shore,United Kingdom: Windermere S basin,0 m,54.351639 N 2.939917 W,2015-01-29,0,m,Surface,54.351639,N,-2.939917,2.939917,W,United Kingdom:,Windermere S basin,Windermere,_shore-,04
-Windermere_shore-05,G08,Shore,United Kingdom: Windermere S basin,0 m,54.351444 N 2.940889 W,2015-01-29,0,m,Surface,54.351444,N,-2.940889,2.940889,W,United Kingdom:,Windermere S basin,Windermere,_shore-,05
-Windermere_shore-06,H08,Shore,United Kingdom: Windermere S basin,0 m,54.352387 N 2.939755 W,2015-01-29,0,m,Surface,54.352387,N,-2.939755,2.939755,W,United Kingdom:,Windermere S basin,Windermere,_shore-,06
 Mock-community_01,E11,Mock community,not applicable,not applicable,not applicable,not applicable,not applicable,,not applicable,not applicable,,not applicable,,,not applicable,Mock community,Mock-community,_,01
 Mock-community_02,F11,Mock community,not applicable,not applicable,not applicable,not applicable,not applicable,,not applicable,not applicable,,not applicable,,,not applicable,Mock community,Mock-community,_,02
 Mock-community_03,G11,Mock community,not applicable,not applicable,not applicable,not applicable,not applicable,,not applicable,not applicable,,not applicable,,,not applicable,Mock community,Mock-community,_,03
