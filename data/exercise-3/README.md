@@ -6,4 +6,4 @@ The data we will be analyzing are CytB sequences amplified from eDNA samples col
 
 We will use the metaBEAT pipeline to process the data, from raw Illumina reads, via quality trimming, read merging, and clustering, to a denovo OTU table. We provided a [notebook](https://github.com/HullUni-bioinformatics/metabarcode-course-2016/blob/master/data/exercise-3/eDNA_example_metadata.ipynb) that will guide you through the process. Start a new notebook and try to replicate the steps outlined there.
 
-Back to Google [doc](https://goo.gl/z1MTTf)
+Back to Google [doc](https://docs.google.com/document/d/1h9d0JrTsDLzsOV5klMkD47807dWTmcXN3uxoYp0ei64/edit#heading=h.47vs6jk5xu41).
