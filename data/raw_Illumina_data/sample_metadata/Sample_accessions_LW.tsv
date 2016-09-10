@@ -1,4 +1,4 @@
-SampleID	marker	SRA_accession	BioSample_accession	BioProject_accession
+SampleID	marker	SRA_Accession	BioSample_accession	BioProject_accession
 Windermere_01	CytB	SRR3360039	SAMN04530435	PRJNA313432
 Windermere_02	CytB	SRR3360041	SAMN04530436	PRJNA313432
 Windermere_03	CytB	SRR3360043	SAMN04530437	PRJNA313432
