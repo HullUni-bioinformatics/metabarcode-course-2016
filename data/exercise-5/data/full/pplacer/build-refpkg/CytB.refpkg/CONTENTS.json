@@ -1,0 +1,57 @@
+{
+    "files": {
+        "profile": "CytB_ref.hmm", 
+        "phylo_model": "phylo_modelioYJ4L.json", 
+        "taxonomy": "taxa.csv", 
+        "tree": "tree94rAnC.tre", 
+        "aln_fasta": "CytB_European-fish_SATIVA_cleaned.alignment.fasta", 
+        "seq_info": "seq_info.csv", 
+        "tree_stats": "RAxML_info.test"
+    }, 
+    "rollback": {
+        "files": {
+            "profile": "CytB_ref.hmm", 
+            "phylo_model": "phylo_modelioYJ4L.json", 
+            "taxonomy": "taxa.csv", 
+            "tree": "RAxML_bestTree.CytB@mafftLinsi-SATIVA_aln_clipped0", 
+            "aln_fasta": "CytB_European-fish_SATIVA_cleaned.alignment.fasta", 
+            "seq_info": "seq_info.csv", 
+            "tree_stats": "RAxML_info.test"
+        }, 
+        "rollback": null, 
+        "metadata": {
+            "create_date": "2016-09-09 12:46:16", 
+            "format_version": "1.1", 
+            "locus": "CytB"
+        }, 
+        "md5": {
+            "profile": "643ce8b92379b1c4aa8a953f1533a913", 
+            "phylo_model": "486eb791f416d00d43f942e5dc5293b4", 
+            "taxonomy": "e0cfaeb61dfef5c83bae45e7af295262", 
+            "tree": "9112f3054abaf57e5bbcea46348fe7a4", 
+            "aln_fasta": "24ddb35f97625573f10c0761e698dbbe", 
+            "seq_info": "977fa930be220d2e128588c29941522f", 
+            "tree_stats": "1121bce42e8c0332cb619389512671b2"
+        }
+    }, 
+    "log": [
+        "Rerooted", 
+        "Stripped refpkg (removed 0 files)", 
+        "Loaded initial files into empty refpkg"
+    ], 
+    "metadata": {
+        "create_date": "2016-09-09 12:46:16", 
+        "format_version": "1.1", 
+        "locus": "CytB"
+    }, 
+    "rollforward": null, 
+    "md5": {
+        "profile": "643ce8b92379b1c4aa8a953f1533a913", 
+        "phylo_model": "486eb791f416d00d43f942e5dc5293b4", 
+        "taxonomy": "e0cfaeb61dfef5c83bae45e7af295262", 
+        "tree": "95cd38c1b4c3b08fc867b93235aa51c0", 
+        "aln_fasta": "24ddb35f97625573f10c0761e698dbbe", 
+        "seq_info": "977fa930be220d2e128588c29941522f", 
+        "tree_stats": "1121bce42e8c0332cb619389512671b2"
+    }
+}
