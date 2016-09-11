@@ -4,7 +4,7 @@ print("\n"+ 'RNA2DNA.py converts an RNA fasta file to uppercase DNA fasta:-')
 
 # Set the input file name
 # Run from within the directory containing the data file
-InFileName = 'rna.fas' #change this to the name of your input file
+InFileName = 'example-rna.fas' #change this to the name of your input file
  
 # Open the input file for reading 'r'
 InFile = open(InFileName, 'r')
