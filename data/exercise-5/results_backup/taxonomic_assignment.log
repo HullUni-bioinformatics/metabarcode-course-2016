@@ -1,0 +1,190 @@
+
+metaBEAT - metaBarcoding and Environmental DNA Analyses tool
+version: v.0.96-global
+
+
+Mon Sep 12 01:33:32 2016
+
+/usr/bin/metaBEAT_global.py -B ../exercise-3/GLOBAL/CytB-trim30min100-merge-c3-id1-OTU-denovo.biom -R REFmap.txt --blast --min_ident 0.85 --kraken --pplace --refpkg ../../../metabarcode-course-2016/data/exercise-5/input_data/CytB.refpkg/ -n 5 -o CytB-trim30min100-merge-c3-id1 -@ c.hahn@hull.ac.uk
+
+
+metaBEAT may be querying NCBI's Entrez databases to fetch/verify taxonomic ids. Entrez User requirements state that you need to identify yourself by providing an email address so that NCBI can contact you in case there is a problem.
+
+You have specified: 'c.hahn@hull.ac.uk'
+
+taxonomy.db found at /usr/bin/taxonomy.db
+
+parsing BIOM table
+
+
+######## PROCESSING REFERENCE DATA ########
+
+
+processing ../../../../../metabarcoding/PHYLOGENETIC_PLACEMENT/Lake_fish/CytB/Reference_DB/CytB_European-fish_SATIVA_cleaned.gb (containing 1736 records)
+
+total number of valid records: 1736
+
+
+establishing taxonomy for reference sequences from custom database
+
+write out taxids to taxids.txt
+
+running taxit to generate reduced taxonomy table
+
+taxit taxtable -d /usr/bin/taxonomy.db -t taxids.txt -o taxa.csv
+
+### BUILDING BLAST DATABASE ###
+
+write out reference sequences to refs.fasta
+
+makeblastdb -in refs.fasta -dbtype nucl -out marker_blast_db
+
+Mon Sep 12 01:33:35 2016
+
+
+denovo OTU table provided - checking if all other files that are required for taxonomic assignment are present
+
+expecting to find query sequences ..
+query sequences detected automatically: /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-3/GLOBAL/global_centroids.fasta
+creating local copies of relevant files if necessary
+
+### RUNNING BLAST ###
+
+running blast search against database /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-5/GLOBAL/BLAST_0.85/marker_blast_db
+blastn -query /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-3/GLOBAL/global_centroids.fasta -db /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-5/GLOBAL/BLAST_0.85/marker_blast_db -evalue 1e-20 -outfmt 5 -out global_blastn.out.xml -num_threads 5 -max_target_seqs 50
+
+Mon Sep 12 01:34:15 2016
+
+
+### INTERPRETING BLAST RESULTS ###
+
+
+parse blast xml file
+
+get top 10% hits from blast output ..  6712 queries processed
+
+assign taxonomy
+
+all queries have been successfully assigned to a taxonomy
+##### FORMATTING AND WRITING BIOM OUTPUT #####
+
+
+##### BLAST ANALYSIS DONE #####
+
+Find result tables in '/home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-5/GLOBAL/BLAST_0.85'
+
+
+{'OTU_denovo': 6712 x 57 <class 'biom.table.Table'> with 13648 nonzero entries (3% dense), 'blast': {'OTU_taxonomy': 6712 x 57 <class 'biom.table.Table'> with 13648 nonzero entries (3% dense), 'cluster_taxonomy': 19 x 57 <class 'biom.table.Table'> with 304 nonzero entries (28% dense), 'taxon_taxonomy': 19 x 57 <class 'biom.table.Table'> with 304 nonzero entries (28% dense)}}
+
+Mon Sep 12 01:34:52 2016
+
+
+##### PHYLOGENETIC PLACEMENT WITH PPLACER #####
+
+
+establishing taxonomy for reference sequences from custom database
+
+write out taxids to taxids.txt
+
+running taxit to generate reduced taxonomy table
+
+taxit taxtable -d /usr/bin/taxonomy.db -t taxids.txt -o taxa.csv
+
+### PREPARING PPLACER INPUT ###
+
+pplacer analysis will be limited to queries with at least 85.0 % similarity to the reference database
+
+This will be determined based on a blast analysis ..
+Filtering queries for pplacer based on results from previous BLAST result : /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-5/GLOBAL/BLAST_0.85/global_blastn.out.xml
+parse blast xml file
+pre-bin based on blast output ..   number of queries processed: 6712
+
+Number of queries passed to pplacer:	1794
+(0 will be reverse complemented first)
+Number of queries directly binned to 'unassigned':	4918
+
+parsing pplacer refpkg: /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016/data/exercise-5/input_data/CytB.refpkg
+
+found hmm profile: /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016/data/exercise-5/input_data/CytB.refpkg/CytB_ref.hmm
+found alignment: /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016/data/exercise-5/input_data/CytB.refpkg/CytB_European-fish_SATIVA_cleaned.alignment.fasta
+
+### ALIGN QUERIES TO HMM PROFILE ###
+
+hmmalign -o queries_to_profile.sto --mapali /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016/data/exercise-5/input_data/CytB.refpkg/CytB_European-fish_SATIVA_cleaned.alignment.fasta /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016/data/exercise-5/input_data/CytB.refpkg/CytB_ref.hmm /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-5/GLOBAL/PPLACER/pplacer.queries.fasta
+
+
+### RUNNING PPLACER ###
+
+pplacer -c /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016/data/exercise-5/input_data/CytB.refpkg queries_to_profile.sto -p --keep-at-most 3 -o pplacer.jplace
+
+
+### INTERPRETING PPLACER RESULTS ###
+
+##### FORMATTING AND WRITING BIOM OUTPUT #####
+
+{'OTU_denovo': 6712 x 57 <class 'biom.table.Table'> with 13648 nonzero entries (3% dense), 'blast': {'OTU_taxonomy': 6712 x 57 <class 'biom.table.Table'> with 13648 nonzero entries (3% dense), 'cluster_taxonomy': 19 x 57 <class 'biom.table.Table'> with 304 nonzero entries (28% dense), 'taxon_taxonomy': 19 x 57 <class 'biom.table.Table'> with 304 nonzero entries (28% dense)}, 'pplacer': {'OTU_taxonomy': 6712 x 57 <class 'biom.table.Table'> with 13648 nonzero entries (3% dense), 'cluster_taxonomy': 20 x 57 <class 'biom.table.Table'> with 293 nonzero entries (25% dense), 'taxon_taxonomy': 20 x 57 <class 'biom.table.Table'> with 293 nonzero entries (25% dense)}}
+
+##### PPLACER ANALYSIS DONE #####
+
+Find result tables in '/home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-5/GLOBAL/PPLACER'
+
+
+
+Mon Sep 12 01:40:23 2016
+
+
+##### RUNNING KRAKEN #####
+
+
+establishing taxonomy for reference sequences from custom database
+
+write out taxids to taxids.txt
+
+running taxit to generate reduced taxonomy table
+
+taxit taxtable -d /usr/bin/taxonomy.db -t taxids.txt -o taxa.csv
+
+### BUILD CUSTOM KRAKEN DATABASE ###
+
+
+## Initiate kraken database and download taxonomy ##
+
+kraken-build --download-taxonomy --db ./KRAKEN_DB
+
+## Add custom data to kraken database ##
+
+kraken-build --add-to-library marker.kraken.fasta --db ./KRAKEN_DB
+
+## Build kraken database ##
+
+kraken-build --build --db ./KRAKEN_DB
+
+
+Successuflly generated at: /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-5/GLOBAL/KRAKEN/KRAKEN_DB
+
+## Running Kraken ##
+
+kraken --threads 5 --db /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-5/GLOBAL/KRAKEN/KRAKEN_DB /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-3/GLOBAL/global_centroids.fasta
+
+Processed 2185 sequences (351816 bp) ...Processed 3395 sequences (851929 bp) ...Processed 4601 sequences (1352139 bp) ...Processed 6712 sequences (1852294 bp) ...6712 sequences (1.85 Mbp) processed in 0.137s (2934.7 Kseq/m, 809.88 Mbp/m).
+  2650 sequences classified (39.48%)
+  4062 sequences unclassified (60.52%)
+
+##### FORMATTING AND WRITING BIOM OUTPUT #####
+
+{'OTU_denovo': 6712 x 57 <class 'biom.table.Table'> with 13648 nonzero entries (3% dense), 'blast': {'OTU_taxonomy': 6712 x 57 <class 'biom.table.Table'> with 13648 nonzero entries (3% dense), 'cluster_taxonomy': 19 x 57 <class 'biom.table.Table'> with 304 nonzero entries (28% dense), 'taxon_taxonomy': 19 x 57 <class 'biom.table.Table'> with 304 nonzero entries (28% dense)}, 'kraken': {'OTU_taxonomy': 6712 x 57 <class 'biom.table.Table'> with 13648 nonzero entries (3% dense), 'cluster_taxonomy': 20 x 57 <class 'biom.table.Table'> with 321 nonzero entries (28% dense), 'taxon_taxonomy': 20 x 57 <class 'biom.table.Table'> with 321 nonzero entries (28% dense)}, 'pplacer': {'OTU_taxonomy': 6712 x 57 <class 'biom.table.Table'> with 13648 nonzero entries (3% dense), 'cluster_taxonomy': 20 x 57 <class 'biom.table.Table'> with 293 nonzero entries (25% dense), 'taxon_taxonomy': 20 x 57 <class 'biom.table.Table'> with 293 nonzero entries (25% dense)}}
+
+##### KRAKEN ANALYSIS DONE #####
+
+Find result tables in '/home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-5/GLOBAL/KRAKEN'
+
+
+
+Mon Sep 12 01:40:34 2016
+
+
+##### DONE! #####
+
+
+Mon Sep 12 01:40:34 2016
+

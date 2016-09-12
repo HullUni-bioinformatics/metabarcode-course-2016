@@ -13,3 +13,4 @@ We will again be using our custom pipeline metaBEAT to make our lives easier and
 
 Most of the input data you will need for the analysis you have already produced in exercise 3. The rest you can find in the folder `input_data`. The directory `supplementary_data` describes the detailed processing steps and all intermediate files to obtain the input data.
 
+We have prepared a notebook that will guide you through the process.
