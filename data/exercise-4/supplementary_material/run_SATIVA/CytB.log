@@ -1,0 +1,88 @@
+SATIVA v0.9-55-g0cbb090, released on 2016-06-28. Last version: https://github.com/amkozlov/sativa 
+By A.Kozlov and J.Zhang, the Exelixis Lab. Based on RAxML 8.2.3 by A.Stamatakis.
+
+SATIVA was called as follows:
+
+./sativa/sativa.py -s alignment.phy -t tax_for_SATIVA.tax -x zoo -n CytB -o ./ -T 5 -v
+
+Mislabels search is running with the following parameters:
+ Alignment:                        alignment.phy
+ Taxonomy:                         tax_for_SATIVA.tax
+ Output directory:                 /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA
+ Job name / output files prefix:   CytB
+ Model of rate heterogeneity:      AUTO
+ Confidence cut-off:               0.000000
+ Number of threads:                5
+
+*** STEP 1: Building the reference tree using provided alignment and taxonomic annotations ***
+
+=> Loading taxonomy from file: tax_for_SATIVA.tax ...
+
+==> Loading reference alignment from file: alignment.phy ...
+
+Guessing input format: not fasta
+Guessing input format: not phylip_relaxed
+===> Validating taxonomy and alignment ...
+
+====> Building a multifurcating tree from taxonomy with 297 seqs ...
+
+Total nodes in resulting tree: 297
+=====> Building the reference alignment ...
+
+======> Saving the outgroup for later re-rooting ...
+
+Outgroup for rooting was saved to: /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/CytB_outgr.tre, outgroup size: 17
+=======> Resolving multifurcation: choosing the best topology from 1 independent RAxML runs ...
+
+
+Reducing the alignment: 
+
+/home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/raxml//run_raxml.sh -w /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020 -T 5 -f c -s /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/CytB_matrix.afa --no-dup-check -m GTRGAMMA -n reduce --verbose -p 13332
+
+
+Constrained ML inference: 
+
+/home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/raxml//run_raxml.sh -w /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020 -T 5 -s /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/CytB_matrix.afa -g /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/CytB_mfu.tre --no-seq-check -N 1 -m GTRGAMMA -n mfresolv_CytB --verbose -p 326
+
+
+GAMMA-based logLH of the reference tree: -39026.997173
+
+========> Calling RAxML-EPA to obtain branch labels ...
+
+/home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/raxml//run_raxml.sh -w /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020 -T 5 -s /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/CytB_lblq.fa -t /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/CytB_bfu.tre --no-seq-check -f y --epa-accumulated-threshold 0.999 -R /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/CytB.opt -m GTRGAMMA -n epalbl_CytB --verbose -p 26407
+
+=========> Post-processing the EPA tree (re-rooting, taxonomic labeling etc.) ...
+
+
+==========> Checking branch labels ...
+shared rank names before training: set(['Eukaryota', 'Chordata'])
+shared rank names after  training: set(['Eukaryota', '-', 'Chordata'])
+
+==========> Saving the reference JSON file: ./CytB.refjson
+
+Calculating the speciation rate...
+
+Writing down the reference file...
+
+*** STEP 2: Searching for mislabels ***
+
+Running the leave-one-sequence-out test...
+
+/home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/raxml//run_raxml.sh -w /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020 -T 5 -s /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/CytB.refaln -t /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/ref_CytB.tre --no-seq-check -f O --epa-accumulated-threshold 0.999 -R /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/CytB.opt -m GTRGAMMA -n l1out_seq_CytB --verbose -p 13332
+
+Leave-one-out test identified 32 suspicious sequences; running final EPA test to check them...
+
+/home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/raxml//run_raxml.sh -w /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020 -T 5 -s /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/CytB.refaln -t /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/sativa/tmp/CytB_1473692470020/final_ref_CytB.tre --no-seq-check -f v --epa-accumulated-threshold 0.999 -m GTRGAMMA -n final_epa_CytB --verbose -p 326
+
+Mislabeled sequences by rank:
+Order       :	2
+Genus       :	3
+Species     :	14
+
+Total mislabels: 19 / 6.40 %
+
+Results were saved to: /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/CytB.mis
+Execution log was saved to: /home/working/media/chrishah/STORAGE/Dropbox/Github/metabarcode-course-2016-temp/data/exercise-4/supplementary_material/run_SATIVA/CytB.log
+
+Analysis completed successfully, elapsed time: 182 seconds (51s reftree, 131s leave-one-out)
+
